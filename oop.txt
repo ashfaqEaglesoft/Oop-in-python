@@ -1,0 +1,32 @@
+Opp in python | opp in python full source code at Eaglesoft
+#Source code
+
+ class Employee:
+
+    no_leaves=8
+    def __init__(self,namea,rolea,salarya):
+        self.name=namea
+        self.role=rolea
+        self.salary=salarya
+    def printdetails(self):
+        return f"Name: {self.name} Role: {self.role} Salary: {self.salary}"
+    @classmethod
+    def change_leaves(cls,new_leaves):
+        cls.no_leaves=new_leaves
+    @classmethod
+    def from_dash(cls,string):
+        params=string.split("-")
+        return cls(params[0],params[1],params[2])
+    @staticmethod
+    def printgood(string):
+        print("Eaglesoftpk is good and "  + string)
+        return print("Eaglesoftpk.blogspot.com")
+
+    pass
+ashfaq=Employee('Muhammad Ashfaq','Programmer',100000)
+zoya=Employee('Zoya Ali','Graphic Designer',100000)
+noman=Employee.from_dash("Noman Ahmad-SEO-40000")
+print(ashfaq.printdetails())
+print(zoya.printdetails())
+print(noman.printdetails())
+print(Employee.printgood("Best"))
